@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import warnings
 
 import tensorflow as tf
-from tensorflow import keras
+from tensorflow import keras  # type: ignore
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import ( # type: ignore
     Dense,

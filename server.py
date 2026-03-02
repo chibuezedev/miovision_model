@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 from typing import Optional
 import tensorflow as tf
-from tensorflow import keras
+from tensorflow import keras  # type: ignore
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, HTMLResponse
@@ -14,8 +14,8 @@ import base64
 
 class Config:
     BASE_DIR = os.getcwd()
-    MODEL_DIR = os.path.join(BASE_DIR, "SAVED_MODELS")
-    MODEL_PATH = os.path.join(MODEL_DIR, "image_cnn_best.h5")
+    # MODEL_DIR = os.path.join(BASE_DIR, "SAVED_MODELS")
+    MODEL_PATH = os.path.join(BASE_DIR, "image_cnn_best.h5")
     IMG_SIZE = (224, 224)
     PREDICTION_THRESHOLD = 0.45
 
